@@ -1,6 +1,8 @@
 package com.example.mir3;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +11,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+
+    TextView tvChangeText;
+    Button btnChangeText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +25,8 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        this.tvChangeText = findViewById(R.id.tvChangeText);
+        this.btnChangeText = findViewById(R.id.btnChangeText);
+        this.btnChangeText.setOnClickListener(view -> tvChangeText.setText("LOL HOW ARE YOU" ));
     }
 }

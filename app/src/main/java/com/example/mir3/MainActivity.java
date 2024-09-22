@@ -1,5 +1,7 @@
 package com.example.mir3;
 
+import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -14,7 +16,9 @@ public class MainActivity extends AppCompatActivity {
 
     TextView tvChangeText;
     Button btnChangeText;
+    Button button3;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,5 +32,7 @@ public class MainActivity extends AppCompatActivity {
         this.tvChangeText = findViewById(R.id.tvChangeText);
         this.btnChangeText = findViewById(R.id.btnChangeText);
         this.btnChangeText.setOnClickListener(view -> tvChangeText.setText("LOL HOW ARE YOU" ));
+        this.button3 = findViewById(R.id.button3);
+        this.button3.setOnClickListener(view -> tvChangeText.setTextColor(Color.parseColor("#0000FF" )));
     }
 }
